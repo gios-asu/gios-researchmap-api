@@ -10,7 +10,7 @@ class LocationController extends Controller
 
     public function index()
     {
-        return response()->json(Location::with('projects')->get());
+        return response()->json(Location::with('projects:name,description,slug,sdg')->get());
     }
 
     public function show($id)

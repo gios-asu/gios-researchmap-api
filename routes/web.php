@@ -14,3 +14,9 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+$router->group(['prefix' => 'v1'], function () use ($router) {
+  $router->get('locations',  ['uses' => 'LocationController@index']);
+
+  $router->get('locations/{id}', ['uses' => 'LocationController@show']);
+});

@@ -32,6 +32,6 @@ class Project extends Model
      */
     public function location()
     {
-        return $this->belongsTo('App\Location');
+        return $this->belongsTo('App\Location', 'iso', 'location_iso');
     }
 }

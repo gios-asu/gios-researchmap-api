@@ -13,7 +13,7 @@ class Project extends Model
      * @var array
      */
     protected $fillable = [
-        'location_id',
+        'location_iso',
         'name',
         'description',
         'slug',

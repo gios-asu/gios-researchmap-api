@@ -15,7 +15,7 @@ class CreateProjectsTable extends Migration
     {
         Schema::create('projects', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('location_id', 3);
+            $table->string('location_iso', 3);
             $table->index('location_id');
             $table->string('name', 1024);
             $table->text('description');

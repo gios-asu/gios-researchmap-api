@@ -13,7 +13,7 @@ class Location extends Model
      * @var array
      */
     protected $fillable = [
-        'id',
+        'iso',
         'name',
         'size',
         'latitude',

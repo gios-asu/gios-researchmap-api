@@ -27,4 +27,12 @@ class Location extends Model
      * @var array
      */
     protected $hidden = [];
+
+    /*
+     * Get the projects associated with this location
+     */
+    public function projects()
+    {
+        return $this->hasMany('App\Project');
+    }
 }

@@ -26,4 +26,12 @@ class Project extends Model
      * @var array
      */
     protected $hidden = [];
+
+    /*
+     * Get the location to which this project is assigned
+     */
+    public function location()
+    {
+        return $this->belongsTo('App\Location');
+    }
 }

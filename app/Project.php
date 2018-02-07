@@ -32,6 +32,6 @@ class Project extends Model
      */
     public function locations()
     {
-        return $this->belongsToMany('App\Location');
+        return $this->belongsToMany('App\Location', 'projects_locations');
     }
 }

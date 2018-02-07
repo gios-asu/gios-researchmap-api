@@ -28,10 +28,10 @@ class Project extends Model
     protected $hidden = [];
 
     /*
-     * Get the location to which this project is assigned
+     * Get the locations to which this project is assigned
      */
-    public function location()
+    public function locations()
     {
-        return $this->belongsTo('App\Location', 'iso', 'location_iso');
+        return $this->belongsToMany('App\Location');
     }
 }

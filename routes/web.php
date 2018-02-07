@@ -19,4 +19,8 @@ $router->group(['prefix' => 'v1', 'middleware' => 'api'], function () use ($rout
   $router->get('locations',  ['uses' => 'LocationController@index']);
 
   $router->get('locations/{id}', ['uses' => 'LocationController@show']);
+
+  $router->get('projects',  ['uses' => 'ProjectController@index']);
+
+  $router->get('projects/{id}', ['uses' => 'ProjectController@show']);
 });

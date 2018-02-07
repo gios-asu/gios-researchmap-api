@@ -10,7 +10,7 @@ class ProjectController extends Controller
 
     public function index()
     {
-        return response()->json(Project::with('locations')->get());
+        return response()->json(Project::with('locations:id,iso,name,size,latitude,longitude,zoom')->get());
     }
 
     public function show($id)

@@ -37,6 +37,6 @@ class CreateGoalsTables extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('projects');
+        Schema::dropIfExists('goals');
     }
 }

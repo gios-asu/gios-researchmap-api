@@ -15,8 +15,8 @@ class CreateGoalsTables extends Migration
     {
         Schema::create('goals', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('name');
-            $table->integer('description');
+            $table->string('name', 1024);
+            $table->text('description');
             $table->timestamps();
         });
 

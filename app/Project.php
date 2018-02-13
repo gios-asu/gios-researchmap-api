@@ -16,8 +16,7 @@ class Project extends Model
         'location_iso',
         'name',
         'description',
-        'slug',
-        'sdg',
+        'slug'
     ];
 
     /**
@@ -33,5 +32,13 @@ class Project extends Model
     public function locations()
     {
         return $this->belongsToMany('App\Location', 'projects_locations');
+    }
+
+    /*
+     * Get the goals to which this project is assigned
+     */
+    public function goals()
+    {
+        return $this->belongsToMany('App\Goal', 'projects_goals');
     }
 }

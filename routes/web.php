@@ -23,4 +23,8 @@ $router->group(['prefix' => 'v1', 'middleware' => 'api'], function () use ($rout
   $router->get('projects',  ['uses' => 'ProjectController@index']);
 
   $router->get('projects/{id}', ['uses' => 'ProjectController@show']);
+
+  $router->get('goals',  ['uses' => 'GoalController@index']);
+
+  $router->get('goals/{id}', ['uses' => 'GoalController@show']);
 });
